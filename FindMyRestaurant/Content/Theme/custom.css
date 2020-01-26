@@ -1,3 +1,15 @@
 ﻿body {
-    /*background-color: #282e38 !important;*/
+    background-color: #ebeff2 !important;
+}
+
+
+
+
+/* StarRating */
+.rating {
+    color: #dee2e6;
+}
+
+.rating.checked {
+    color: orange;
 }

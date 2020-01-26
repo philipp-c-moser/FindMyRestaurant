@@ -8,6 +8,7 @@ namespace FindMyRestaurant.Core
 
         #region Fields
         IRestaurantRepository RestaurantRepository { get; }
+        IRestaurantCategoryRepository RestaurantCategoryRepository { get; }
         #endregion
 
 

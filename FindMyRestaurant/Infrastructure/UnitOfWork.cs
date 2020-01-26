@@ -12,6 +12,7 @@ namespace FindMyRestaurant.Infrastructure
         private readonly AppDbContext _context;
 
         private IRestaurantRepository _restaurantRepository;
+        private IRestaurantCategoryRepository _restaurantCategoryRepository;
         #endregion
 
         #region Constructor
@@ -26,6 +27,11 @@ namespace FindMyRestaurant.Infrastructure
         public IRestaurantRepository RestaurantRepository
         {
             get { return _restaurantRepository ?? (_restaurantRepository = new RestaurantRepository(_context)); }
+        }
+
+        public IRestaurantCategoryRepository RestaurantCategoryRepository
+        {
+            get { return _restaurantCategoryRepository ?? (_restaurantCategoryRepository = new RestaurantCategoryRepository(_context)); }
         }
         #endregion
 
@@ -46,6 +52,7 @@ namespace FindMyRestaurant.Infrastructure
         public void Dispose()
         {
             _restaurantRepository = null;
+            _restaurantCategoryRepository = null;
             _context.Dispose();
         }
         #endregion

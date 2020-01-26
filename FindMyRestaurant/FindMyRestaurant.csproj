@@ -160,6 +160,7 @@
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.Designer.cs">
       <DependentUpon>202001261912492_AddRestaurantsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Repositories\RestaurantRepository.cs" />
     <Compile Include="Routes\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Routes\WebApiConfig.cs" />

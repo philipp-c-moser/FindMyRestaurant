@@ -1,0 +1,16 @@
+﻿@{
+    var trackingKey = System.Configuration.ConfigurationManager.AppSettings["GoogleAnalyticsTrackingKey"];
+}
+
+@if (!String.IsNullOrEmpty(trackingKey))
+{
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=@trackingKey"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '@trackingKey');
+    </script>
+}

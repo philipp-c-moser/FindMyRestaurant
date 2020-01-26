@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using FindMyRestaurant.Framework.Helpers
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,6 +10,12 @@
     <title>@ViewBag.Title - FindMyRestaurant</title>
     @Styles.Render("~/Content/Theme/Basic")
     @RenderSection("styles", required: false)
+
+    @Html.Partial("~/Views/Shared/Layout/Partial/_GoogleAnalytics.cshtml")
+
+
+    <link rel="icon" type="image/png" sizes="100x100" href="@FileHelper.BuildImageUrl("4a5b63cd-c7e2-4da7-93d5-f9b2c6ae1584", "png")">
+
 </head>
 <body>
 
@@ -16,8 +24,6 @@
     <!-- ./ Navigation -->
 
     @RenderBody()
-
-
 
     <!-- Footer Start -->
     @Html.Partial("~/Views/Shared/Layout/Partial/_Footer.cshtml")

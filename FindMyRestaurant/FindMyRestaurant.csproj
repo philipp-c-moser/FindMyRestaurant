@@ -154,6 +154,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Core\Domain\Restaurant.cs" />
     <Compile Include="Routes\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Routes\WebApiConfig.cs" />
@@ -377,6 +378,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Core\Domain\Rating\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

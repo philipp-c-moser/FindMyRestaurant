@@ -11,12 +11,16 @@ namespace FindMyRestaurant.Framework.Helpers
         #region PublicMethods
         public static string BuildImageUrl(string imageName, string fileType)
         {
-            return "https://cnt.01.bb.delivery.philipp-moser.de/irfdoe2un/" + imageName + "." + fileType;
+            return GetCdnServerAddress() + imageName + "." + fileType;
         }
         #endregion
 
 
         #region PrivateMethods
+        private static string GetCdnServerAddress()
+        {
+            return System.Configuration.ConfigurationManager.AppSettings["CdnServerAddress"];
+        }
         #endregion
 
 

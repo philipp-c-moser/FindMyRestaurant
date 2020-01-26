@@ -35,38 +35,8 @@
                                     <th>Bewertung</th>
                                 </tr>
                             </thead>
-                            <tbody>                                
-                                <tr onclick="javascript:console.log('Clicked')">
-                                    <td>
-                                        <a href="#">
-                                            Mediterrane Durlach
-                                        </a>
-                                    </td>
-                                    <td>25.01.2020</td>
-                                    <td>
-                                        <span class="rating fa fa-star checked"></span>
-                                        <span class="rating fa fa-star checked"></span>
-                                        <span class="rating fa fa-star checked"></span>
-                                        <span class="rating fa fa-star checked"></span>
-                                        <span class="rating fa fa-star"></span>
-                                    </td>
-                                </tr>
-
-                                <tr onclick="javascript:console.log('Clicked')">
-                                    <td>
-                                        <a href="">
-                                            Brick + Bone Steakhouse - Karlsruhe
-                                        </a>
-                                    </td>
-                                    <td>04.01.2020</td>
-                                    <td>
-                                        <span class="rating fa fa-star checked"></span>
-                                        <span class="rating fa fa-star checked"></span>
-                                        <span class="rating fa fa-star"></span>
-                                        <span class="rating fa fa-star"></span>
-                                        <span class="rating fa fa-star"></span>
-                                    </td>
-                                </tr>
+                            <tbody class="latest-restaurants">                                
+                                
 
                             </tbody>
                         </table>
@@ -81,3 +51,56 @@
     </div> <!-- end container -->
 </div>
 <!-- end wrapper -->
+
+
+
+
+@section scripts {
+
+    <script type="text/javascript">
+
+
+        const RestaurantTableRow = ({ Id, Name }) => `
+          <tr onclick="javascript:console.log(${Name})">
+            <td>
+                <a href="">
+                    ${Name}
+                </a>
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <span class="rating fa fa-star"></span>
+                <span class="rating fa fa-star"></span>
+                <span class="rating fa fa-star"></span>
+                <span class="rating fa fa-star"></span>
+                <span class="rating fa fa-star"></span>
+            </td>
+        </tr>
+        `;
+
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "/api/v1/restaurants/getLatest"
+            }).then(function (data) {
+
+                data.forEach(appendToTableRows);
+
+            })
+
+        });
+
+
+
+        function appendToTableRows(item) {
+            $('.latest-restaurants').append([item].map(RestaurantTableRow).join(''));
+        }
+
+
+    </script>
+
+
+}

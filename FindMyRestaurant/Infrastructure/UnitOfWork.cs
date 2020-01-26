@@ -1,5 +1,7 @@
 ﻿using FindMyRestaurant.Core;
 using FindMyRestaurant.Infrastructure.Data;
+using FindMyRestaurant.Core.Repositories;
+using FindMyRestaurant.Infrastructure.Repositories;
 
 namespace FindMyRestaurant.Infrastructure
 {
@@ -8,6 +10,8 @@ namespace FindMyRestaurant.Infrastructure
 
         #region Fields
         private readonly AppDbContext _context;
+
+        private IRestaurantRepository _restaurantRepository;
         #endregion
 
         #region Constructor
@@ -19,7 +23,12 @@ namespace FindMyRestaurant.Infrastructure
 
 
         #region Members
+        public IRestaurantRepository RestaurantRepository
+        {
+            get { return _restaurantRepository ?? (_restaurantRepository = new RestaurantRepository(_context)); }
+        }
         #endregion
+
 
         #region Methods
         public void SaveChanges()
@@ -36,6 +45,7 @@ namespace FindMyRestaurant.Infrastructure
         #region Disposable Member
         public void Dispose()
         {
+            _restaurantRepository = null;
             _context.Dispose();
         }
         #endregion

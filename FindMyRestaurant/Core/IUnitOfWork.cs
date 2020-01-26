@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FindMyRestaurant.Core.Repositories;
 
 namespace FindMyRestaurant.Core
 {
@@ -10,6 +7,7 @@ namespace FindMyRestaurant.Core
     {
 
         #region Fields
+        IRestaurantRepository RestaurantRepository { get; }
         #endregion
 
 

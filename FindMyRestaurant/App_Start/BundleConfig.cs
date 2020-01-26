@@ -25,6 +25,27 @@ namespace FindMyRestaurant
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+
+            #region ThemeBundles            
+            bundles.Add(new StyleBundle("~/Content/Theme/Basic").Include(
+                    "~/Content/bootstrap.css",
+                    "~/Content/Theme/icons.css",
+                    "~/Content/Theme/app.css"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/Theme/Basic").Include(
+                    "~/Scripts/jquery-{version}.js",
+                    "~/Scripts/bootstrap.js",
+                    "~/Scripts/Theme/vendor.min.js",
+                    "~/Scripts/Theme/app.min.js"
+                ));
+            #endregion
+
+
+
+
         }
     }
 }

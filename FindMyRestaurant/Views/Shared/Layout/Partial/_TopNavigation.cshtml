@@ -1,1 +1,63 @@
-﻿
+﻿@{ 
+    var logoUrl = "https://cnt.01.bb.delivery.philipp-moser.de/y85mth1i9/06b354ec-78ad-4bac-bafa-5afcddb75de5.png";
+
+}
+
+<header id="topnav">
+
+    <!-- Topbar Start -->
+    <div class="navbar-custom">
+        <div class="container-fluid">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                <li class="dropdown notification-list">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle nav-link">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </li>
+
+                <li class="d-none d-sm-block">
+                    <form class="app-search">
+                        <div class="app-search-box">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Suche...">
+                                <div class="input-group-append">
+                                    <button class="btn" type="submit">
+                                        <i class="fe-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+
+
+                
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="index.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <img src="@logoUrl" alt="" height="40">
+                    </span>
+                    <span class="logo-sm">
+                        <img src="@logoUrl" alt="" height="40">
+                    </span>
+                </a>
+            </div>
+
+        </div> <!-- end container-fluid-->
+    </div>
+    <!-- end Topbar -->
+
+    @Html.Partial("~/Views/Shared/Layout/Partial/_Navigation.cshtml")
+
+</header>

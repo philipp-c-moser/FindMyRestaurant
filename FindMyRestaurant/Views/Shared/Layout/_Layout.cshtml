@@ -6,8 +6,7 @@
     <meta content="Philipp C. Moser" name="author" />
 
     <title>@ViewBag.Title - FindMyRestaurant</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/Theme/Basic")
 </head>
 <body>
 
@@ -19,8 +18,27 @@
 
 
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    2020 &copy; FindMyRestaurant</a>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-md-right footer-links d-none d-sm-block">
+                        <a href="">Impressum</a>
+                        <a href="">Datenschutz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+
+
+    @Scripts.Render("~/bundles/Theme/Basic")
     @RenderSection("scripts", required: false)
 </body>
 </html>

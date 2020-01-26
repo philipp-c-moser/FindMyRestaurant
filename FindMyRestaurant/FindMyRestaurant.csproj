@@ -363,6 +363,7 @@
     <Content Include="Views\Shared\Layout\Partial\_TopNavigation.cshtml" />
     <Content Include="Scripts\Theme\app.min.js.map" />
     <Content Include="Scripts\Theme\vendor.min.js.map" />
+    <Content Include="Views\Shared\Layout\Partial\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

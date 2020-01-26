@@ -221,6 +221,7 @@
     <Content Include="Content\Theme\Fonts\weathericons-regular-webfont.ttf" />
     <Content Include="Content\Theme\Fonts\weathericons-regular-webfont.woff" />
     <Content Include="Content\Theme\Fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="AppSettings.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

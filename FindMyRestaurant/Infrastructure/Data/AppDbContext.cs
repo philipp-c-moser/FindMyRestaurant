@@ -8,6 +8,7 @@ namespace FindMyRestaurant.Infrastructure.Data
     {
 
         public DbSet<Restaurant> Restaurants { get; set; }
+        public DbSet<RestaurantCategory> RestaurantCategories { get; set; }
 
 
 

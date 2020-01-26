@@ -155,6 +155,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Core\Domain\Restaurant.cs" />
+    <Compile Include="Core\Repositories\IRestaurantRepository.cs" />
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.cs" />
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.Designer.cs">
       <DependentUpon>202001261912492_AddRestaurantsTable.cs</DependentUpon>

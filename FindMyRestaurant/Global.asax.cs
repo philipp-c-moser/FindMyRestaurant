@@ -1,8 +1,10 @@
+using System.Data.Entity;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+using FindMyRestaurant.Infrastructure.Data;
 using FindMyRestaurant.Routes;
 
 namespace FindMyRestaurant
@@ -17,6 +19,11 @@ namespace FindMyRestaurant
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
+            var migrateDb = new AppDbContext();
+            migrateDb.Database.Initialize(true);
         }
     }
 }

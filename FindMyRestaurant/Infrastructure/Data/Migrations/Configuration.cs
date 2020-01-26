@@ -1,4 +1,4 @@
-namespace FindMyRestaurant.Migrations
+namespace FindMyRestaurant.Infrastructure.Data.Migrations
 {
     using System;
     using System.Data.Entity;

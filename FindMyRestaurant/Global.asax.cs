@@ -5,6 +5,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 
 using FindMyRestaurant.Infrastructure.Data;
+using FindMyRestaurant.Infrastructure.Data.Migrations;
 using FindMyRestaurant.Routes;
 
 namespace FindMyRestaurant
@@ -21,7 +22,7 @@ namespace FindMyRestaurant
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
 
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Configuration>());
             var migrateDb = new AppDbContext();
             migrateDb.Database.Initialize(true);
         }

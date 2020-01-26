@@ -7,6 +7,7 @@ using System.Web.Routing;
 using FindMyRestaurant.Infrastructure.Data;
 using FindMyRestaurant.Infrastructure.Data.Migrations;
 using FindMyRestaurant.Routes;
+using FindMyRestaurant.Infrastructure.Mapping;
 
 namespace FindMyRestaurant
 {
@@ -14,6 +15,8 @@ namespace FindMyRestaurant
     {
         protected void Application_Start()
         {
+            AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MappingProfile>());
+
             AreaRegistration.RegisterAllAreas();
             UnityConfig.RegisterComponents();
             GlobalConfiguration.Configure(WebApiConfig.Register);

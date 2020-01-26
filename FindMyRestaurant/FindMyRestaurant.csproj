@@ -165,6 +165,7 @@
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.Designer.cs">
       <DependentUpon>202001261912492_AddRestaurantsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Mapping\MappingProfile.cs" />
     <Compile Include="Infrastructure\Repositories\RestaurantCategoryRepository.cs" />
     <Compile Include="Infrastructure\Repositories\RestaurantRepository.cs" />
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261932456_AddRestaurantCategoriesTable.cs" />

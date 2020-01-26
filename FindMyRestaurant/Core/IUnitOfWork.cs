@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace FindMyRestaurant.Core
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
+
+        #region Fields
+        #endregion
+
+
+        #region Methods
+        void SaveChanges();
+        void SaveChangesAsync();
+        new void Dispose();
+        #endregion
+
+
+
     }
 }

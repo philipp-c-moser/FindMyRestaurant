@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace FindMyRestaurant
+namespace FindMyRestaurant.Routes
 {
     public static class WebApiConfig
     {

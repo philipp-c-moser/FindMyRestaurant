@@ -198,6 +198,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Theme\app.css" />
+    <Content Include="Content\Theme\custom.css" />
     <Content Include="Content\Theme\Fonts\dripicons-v2.svg" />
     <Content Include="Content\Theme\Fonts\dropify.svg" />
     <Content Include="Content\Theme\Fonts\fa-brands-400.svg" />

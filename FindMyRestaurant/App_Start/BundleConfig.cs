@@ -32,7 +32,8 @@ namespace FindMyRestaurant
             bundles.Add(new StyleBundle("~/Content/Theme/Basic").Include(
                     "~/Content/bootstrap.css",
                     "~/Content/Theme/icons.css",
-                    "~/Content/Theme/app.css"
+                    "~/Content/Theme/app.css",
+                    "~/Content/Theme/custom.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/Theme/Basic").Include(

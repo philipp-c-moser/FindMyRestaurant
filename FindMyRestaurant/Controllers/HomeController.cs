@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using FindMyRestaurant.Framework.Controllers;
 
 namespace FindMyRestaurant.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : MvcControllerBase
     {
         public ActionResult Index()
         {

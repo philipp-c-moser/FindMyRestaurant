@@ -190,6 +190,13 @@
     <Content Include="Content\Theme\Fonts\themify.svg" />
     <Content Include="Content\Theme\Fonts\weathericons-regular-webfont.svg" />
     <Content Include="Content\Theme\icons.css" />
+    <Content Include="Error\400.html" />
+    <Content Include="Error\401.html" />
+    <Content Include="Error\403.html" />
+    <Content Include="Error\404.html" />
+    <Content Include="Error\500.html" />
+    <Content Include="Error\resource\default-particles.js" />
+    <Content Include="Error\resource\default.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

@@ -159,6 +159,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Core\Domain\Restaurant.cs" />
     <Compile Include="Core\Domain\RestaurantCategory.cs" />
+    <Compile Include="Core\Dto\RestaurantDto.cs" />
     <Compile Include="Core\Repositories\IRestaurantCategoryRepository.cs" />
     <Compile Include="Core\Repositories\IRestaurantRepository.cs" />
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.cs" />

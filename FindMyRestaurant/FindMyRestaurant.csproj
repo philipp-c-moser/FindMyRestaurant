@@ -157,6 +157,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Controllers\VisitController.cs" />
     <Compile Include="Core\Domain\Restaurant.cs" />
     <Compile Include="Core\Domain\RestaurantCategory.cs" />
     <Compile Include="Core\Dto\RestaurantDto.cs" />
@@ -403,6 +404,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Core\Domain\Rating\" />
+    <Folder Include="Views\Visit\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -163,6 +163,7 @@
     <Compile Include="Core\Dto\RestaurantDto.cs" />
     <Compile Include="Core\Repositories\IRestaurantCategoryRepository.cs" />
     <Compile Include="Core\Repositories\IRestaurantRepository.cs" />
+    <Compile Include="Framework\Helpers\CustomHtmlHelper.cs" />
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.cs" />
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261912492_AddRestaurantsTable.Designer.cs">
       <DependentUpon>202001261912492_AddRestaurantsTable.cs</DependentUpon>

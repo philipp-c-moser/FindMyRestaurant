@@ -21,7 +21,9 @@
             <div class="col-xl-6 col-md-6">
                 <div class="card-box widget-user">
                     <div class="text-center">
-                        <h2 class="font-weight-normal text-primary" data-plugin="counterup">0</h2>
+                        <h2 class="font-weight-normal text-primary" data-plugin="counterup">
+                            <span class="rated-restaurants-amount">0</span>
+                        </h2>
                         <h5>Restaurants bewertet</h5>
                     </div>
                 </div>
@@ -29,7 +31,9 @@
             <div class="col-xl-6 col-md-6">
                 <div class="card-box widget-user">
                     <div class="text-center">
-                        <h2 class="font-weight-normal text-primary" data-plugin="counterup">0</h2>
+                        <h2 class="font-weight-normal text-primary" data-plugin="counterup">
+                            <span class="pending-restaurants-amount">0</span>
+                        </h2>
                         <h5>Restaurants ausstehend</h5>
                     </div>
                 </div>
@@ -117,6 +121,14 @@
 
                 data.forEach(appendToTableRows);
 
+            });
+
+
+            $.ajax({
+                url: ""
+            }).then(function (data) {
+                $('.rated-restaurants-amount').append(data.amountOfRatedRestaurants);
+                $('.pending-restaurants-amount').append(data.amountOfPendingRestaurants);
             })
 
         });

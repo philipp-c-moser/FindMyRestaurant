@@ -403,11 +403,11 @@
     <Content Include="Views\Shared\Layout\Partial\_Footer.cshtml" />
     <Content Include="Views\Shared\Components\Partial\_GoogleAnalytics.cshtml" />
     <Content Include="Views\Visit\Index.cshtml" />
+    <Content Include="Views\Legal\Imprint.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Core\Domain\Rating\" />
-    <Folder Include="Views\Legal\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

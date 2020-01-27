@@ -24,7 +24,8 @@ namespace FindMyRestaurant.WebApi.v1
         [Route("getLatest")]
         public async Task<IEnumerable<RestaurantDto>> GetLatest()
         {
-            var latestRestaurants = await _unitOfWork.RestaurantRepository.GetAllAsync();
+            
+            var latestRestaurants = await _unitOfWork.RestaurantRepository.GetLatestRestaurantsAsync(_amountOfItemsForQuickTables);
 
             return Mapper.Map<IEnumerable<Restaurant>, IEnumerable<RestaurantDto>>(latestRestaurants);
         }

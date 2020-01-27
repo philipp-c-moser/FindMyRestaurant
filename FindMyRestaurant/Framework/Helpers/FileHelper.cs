@@ -7,24 +7,19 @@ namespace FindMyRestaurant.Framework.Helpers
 {
     public static class FileHelper
     {
+        private static readonly string _cdnServerAddress;
+
+        static FileHelper()
+        {
+            _cdnServerAddress = System.Configuration.ConfigurationManager.AppSettings["CdnServerAddress"];
+        }
 
         #region PublicMethods
         public static string BuildImageUrl(string imageName, string fileType)
         {
-            return GetCdnServerAddress() + imageName + "." + fileType;
+            return _cdnServerAddress + imageName + "." + fileType;
         }
         #endregion
-
-
-        #region PrivateMethods
-        private static string GetCdnServerAddress()
-        {
-            return System.Configuration.ConfigurationManager.AppSettings["CdnServerAddress"];
-        }
-        #endregion
-
-
-
 
     }
 }

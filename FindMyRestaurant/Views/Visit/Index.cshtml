@@ -1,4 +1,4 @@
-﻿
+﻿@using FindMyRestaurant.Framework.Helpers
 @{
     ViewBag.Title = "Besuche";
 }
@@ -8,14 +8,7 @@
 <div class="wrapper">
     <div class="container-fluid">
 
-        <!-- start page title -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-title-box">
-                    <h4 class="page-title">@ViewBag.Title</h4>
-                </div>
-            </div>
-        </div>
-        <!-- end page title -->
+        @CustomHtmlHelper.PageTitleRow(ViewBag.Title)
+
     </div>
 </div>

@@ -11,11 +11,11 @@ h4.page-title {
 
 
 /* StarRating */
-.rating {
+.pm-rating {
     color: #dee2e6;
 }
 
-.rating.checked {
+.pm-rating.checked {
     color: orange;
 }
 
@@ -27,4 +27,12 @@ h4.page-title {
     box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
     margin-bottom: 24px;
     border-radius: .25rem;
+}
+
+
+/* Forms */
+
+.pm-required:after {
+    content: "*";
+    color: red;
 }

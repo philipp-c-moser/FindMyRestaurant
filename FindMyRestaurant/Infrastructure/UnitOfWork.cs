@@ -13,6 +13,7 @@ namespace FindMyRestaurant.Infrastructure
 
         private IRestaurantRepository _restaurantRepository;
         private IRestaurantCategoryRepository _restaurantCategoryRepository;
+        private IVisitRepository _visitRepository;
         #endregion
 
         #region Constructor
@@ -33,6 +34,12 @@ namespace FindMyRestaurant.Infrastructure
         {
             get { return _restaurantCategoryRepository ?? (_restaurantCategoryRepository = new RestaurantCategoryRepository(_context)); }
         }
+
+        public IVisitRepository VisitRepository
+        {
+            get { return _visitRepository ?? (_visitRepository = new VisitRepository(_context)); }
+        }
+
         #endregion
 
 
@@ -53,6 +60,7 @@ namespace FindMyRestaurant.Infrastructure
         {
             _restaurantRepository = null;
             _restaurantCategoryRepository = null;
+            _visitRepository = null;
             _context.Dispose();
         }
         #endregion

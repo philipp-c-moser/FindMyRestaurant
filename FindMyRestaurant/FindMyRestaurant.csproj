@@ -182,6 +182,10 @@
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001261939503_AddRelationBetweenRestaurantsAndRestaurantCategories.Designer.cs">
       <DependentUpon>202001261939503_AddRelationBetweenRestaurantsAndRestaurantCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001302312204_AddVisitsTable.cs" />
+    <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001302312204_AddVisitsTable.Designer.cs">
+      <DependentUpon>202001302312204_AddVisitsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Routes\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Routes\WebApiConfig.cs" />
@@ -434,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\Data\Migrations\v1_0_0\202001261939503_AddRelationBetweenRestaurantsAndRestaurantCategories.resx">
       <DependentUpon>202001261939503_AddRelationBetweenRestaurantsAndRestaurantCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infrastructure\Data\Migrations\v1_0_0\202001302312204_AddVisitsTable.resx">
+      <DependentUpon>202001302312204_AddVisitsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

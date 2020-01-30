@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Threading.Tasks;
 
 using FindMyRestaurant.Framework.Controllers;
 using FindMyRestaurant.Core;
@@ -14,5 +15,14 @@ namespace FindMyRestaurant.WebApi.v1
         {
             _unitOfWork = unitOfWork;
         }
+
+
+        [HttpPost]
+        [Route("add")]
+        public async Task<IHttpActionResult> Add()
+        {
+            return Ok();
+        }
+
     }
 }

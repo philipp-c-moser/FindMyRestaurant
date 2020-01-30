@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 
 using FindMyRestaurant.Core.Domain;
-using FindMyRestaurant.Core.Dto;
+using FindMyRestaurant.Core.Dto.Restaurant;
 
 namespace FindMyRestaurant.Infrastructure.Mapping
 {

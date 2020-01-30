@@ -163,7 +163,7 @@
     <Compile Include="Core\Domain\Restaurant.cs" />
     <Compile Include="Core\Domain\RestaurantCategory.cs" />
     <Compile Include="Core\Domain\Visit.cs" />
-    <Compile Include="Core\Dto\RestaurantDto.cs" />
+    <Compile Include="Core\Dto\Restaurant\RestaurantDto.cs" />
     <Compile Include="Core\Repositories\IRestaurantCategoryRepository.cs" />
     <Compile Include="Core\Repositories\IRestaurantRepository.cs" />
     <Compile Include="Framework\Helpers\CustomHtmlHelper.cs" />

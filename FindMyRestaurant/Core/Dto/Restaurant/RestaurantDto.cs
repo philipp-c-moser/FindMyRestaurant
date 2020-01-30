@@ -1,4 +1,4 @@
-﻿namespace FindMyRestaurant.Core.Dto
+﻿namespace FindMyRestaurant.Core.Dto.Restaurant
 {
     public class RestaurantDto
     {

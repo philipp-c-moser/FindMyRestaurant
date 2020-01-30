@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FindMyRestaurant.Framework.Controllers;
 using FindMyRestaurant.Core;
 using FindMyRestaurant.Core.Domain;
-using FindMyRestaurant.Core.Dto;
+using FindMyRestaurant.Core.Dto.Restaurant;
 
 namespace FindMyRestaurant.WebApi.v1
 {

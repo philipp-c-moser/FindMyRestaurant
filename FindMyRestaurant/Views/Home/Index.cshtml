@@ -25,9 +25,9 @@
                 <div class="card-box widget-user">
                     <div class="text-center">
                         <h2 class="font-weight-normal text-primary" data-plugin="counterup">
-                            <span class="pending-restaurants-amount"></span>
+                            <span class="visits-amount"></span>
                         </h2>
-                        <h5>Restaurants ausstehend</h5>
+                        <h5>Besuche gesamt</h5>
                     </div>
                 </div>
             </div>
@@ -39,8 +39,8 @@
         <div class="row">
 
             <div class="col-xl-12">
-                <div class="card-box">
-                    
+                <div class="card-box pm-hide-card-box" id="box-restaurants-content">
+
                     <h4 class="header-title mt-0 mb-3">Zuletzt hinzugefügte Restaurants</h4>
 
                     <div class="table-responsive">
@@ -53,28 +53,24 @@
                                 </tr>
                             </thead>
                             <tbody class="latest-restaurants">
-                                <tr>
-                                    @for (var i = 0; i <= 2; i++)
-                                    {
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <div class="spinner-grow text-primary" role="status">
-                                                    <span class="sr-only">Loading...</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    }                                    
-                                </tr>
-
-
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div><!-- end col -->
+
+                <div class="card-box" id="box-restaurants-preloader">
+                
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+
+                </div>
+                </div><!-- end col -->
 
 
-        </div><!-- end row -->
+            </div><!-- end row -->
 
         <div class="row mt-2">
             <div class="col-xl-12">
@@ -123,7 +119,8 @@
             $.ajax({
                 url: "/api/v1/restaurants/getLatest"
             }).then(function (data) {
-                $('.latest-restaurants').empty();
+                $('#box-restaurants-preloader').addClass('pm-hide-card-box');
+                $('#box-restaurants-content').removeClass('pm-hide-card-box');
                 data.forEach(appendToTableRows);
 
             });
@@ -133,7 +130,7 @@
                 url: ""
             }).then(function (data) {
                 $('.rated-restaurants-amount').append(data.amountOfRatedRestaurants);
-                $('.pending-restaurants-amount').append(data.amountOfPendingRestaurants);
+                $('.visits-amount').append(data.amountOfVisits);
             })
 
         });

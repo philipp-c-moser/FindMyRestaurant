@@ -188,6 +188,7 @@
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202001302312204_AddVisitsTable.Designer.cs">
       <DependentUpon>202001302312204_AddVisitsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Repositories\VisitRepository.cs" />
     <Compile Include="Routes\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Routes\WebApiConfig.cs" />

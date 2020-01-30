@@ -1,7 +1,12 @@
-﻿
+﻿@using FindMyRestaurant.Framework.Helpers;
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Restaurants";
 }
 
-<h2>Index</h2>
+<div class="wrapper">
+    <div class="container-fluid">
 
+        @CustomHtmlHelper.PageTitleRow(ViewBag.Title)
+
+    </div>
+</div>

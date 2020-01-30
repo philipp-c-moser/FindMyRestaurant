@@ -113,38 +113,40 @@
                 </button>
             </div>
             <div class="modal-body">
-
+               
                 <form id="addVisitForm" action="" method="post">
                     <div class="form-group row">
                         <label class="col-sm-2  col-form-label pm-required" for="newVisit-Name">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" id="newVisit-Name" name="newVisit-Name" class="form-control" value="">
+                            <input type="text" id="newVisit-Name" name="newVisit-Name" class="form-control" value="" required="">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-2  col-form-label pm-required" for="newVisit-Date">Datum</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="newVisit-Date" type="date" name="newVisit-Date">
+                            <input class="form-control" id="newVisit-Date" type="date" name="newVisit-Date" required="">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label pm-required" for="newVisit-Restaurant">Restaurant</label>
                         <div class="col-sm-10">
-                            <select class="custom-select" id="newVisit-Restaurant" name="newVisit-Restaurant">
+                            <select class="custom-select" id="newVisit-Restaurant" name="newVisit-Restaurant" required="">
                                 <option selected="" disabled="" hidden="">Restaurant auswählen</option>
                             </select>
                         </div>
                     </div>
                 </form>
 
-                
+
 
             </div>
             <div class="modal-footer">
+                <span class="pm-validation-error hidden" id="validation-global">Bitte Daten prüfen.</span>
+              
                 <button type="reset" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                <button type="button" class="btn btn-primary" id="submit">Besuch Anlegen</button>
+                <button type="button" class="btn btn-primary" id="submit">Besuch anlegen</button>
             </div>
         </div>
     </div>
@@ -179,15 +181,23 @@
 
         $('#submit').on('click', function () {
 
-            $.ajax({
-                url: '/api/v1/visits/add',
-                type: 'POST',
-                dataType: 'json',
-                data: $('#addVisitForm').serialize(),
-                success: function (result) {
-                    alert("Super");
-                }
-            })
+            if ($('#newVisit-Name').val().length !== 0) {
+                $.ajax({
+                    url: '/api/v1/visits/add',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: $('#addVisitForm').serialize(),
+                    success: function (result) {
+                        alert("Super");
+                    }
+                })
+            }
+            else {
+                $('#validation-global').removeClass('hidden');
+                $('#newVisit-Name').addClass('pm-validation-error');
+            }
+
+            
 
         });
 

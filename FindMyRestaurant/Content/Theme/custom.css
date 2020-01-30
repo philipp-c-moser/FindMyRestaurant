@@ -41,3 +41,16 @@ h4.page-title {
     content: "*";
     color: red;
 }
+
+span.pm-validation-error {
+    color: red;
+}
+span.pm-validation-error.hidden {
+    display: none;
+}
+
+
+input.pm-validation-error {
+    border: 1px solid red;
+}
+

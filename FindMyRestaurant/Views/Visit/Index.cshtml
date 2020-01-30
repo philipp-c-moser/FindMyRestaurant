@@ -26,8 +26,6 @@
                                 <label>Sortieren :</label>
                                 <select class="form-control ml-2 form-control-sm">
                                     <option>Datum</option>
-                                    <option>Name</option>
-                                    <option>Bewertung</option>
                                 </select>
                             </div>
                         </form>
@@ -103,10 +101,6 @@
 
 
 
-
-
-
-
 <!-- Modals -->
 
 <div class="modal fade" id="addVisitModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="addVisitModalLabel" aria-hidden="true">
@@ -120,18 +114,39 @@
             </div>
             <div class="modal-body">
 
-                <div class="d-flex justify-content-center">
-                    <div class="spinner-grow text-primary" role="status">
-                        <span class="sr-only">Loading...</span>
+                <div class="form-group row">
+                    <label class="col-sm-2  col-form-label" for="newVisit-Name">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="newVisit-Name" name="newVisit-Name" class="form-control" value="">
                     </div>
                 </div>
-                
+
+
+                <div class="form-group row">
+                    <label class="col-sm-2  col-form-label" for="newVisit-Date">Datum</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="newVisit-Date" type="date" name="newVisit-Date">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="newVisit-Restaurant">Restaurant</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select" id="newVisit-Restaurant" name="newVisit-Restaurant">
+                            <option selected="">Restaurant auswählen</option>
+                            <option value="1">Mediterrane Durlach</option>
+                            <option value="2">Brick + Bone Steakhouse - Karlsruhe</option>
+                        </select>
+                    </div>                   
+                </div>
+
 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                <button type="button" class="btn btn-primary">Anlegen</button>
+                <button type="button" class="btn btn-primary">Besuch Anlegen</button>
             </div>
         </div>
     </div>

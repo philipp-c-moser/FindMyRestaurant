@@ -9,7 +9,7 @@ namespace FindMyRestaurant.Infrastructure.Data
 
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantCategory> RestaurantCategories { get; set; }
-
+        public DbSet<Visit> Visits { get; set; }
 
 
         public AppDbContext()

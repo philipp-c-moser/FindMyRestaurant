@@ -8,6 +8,7 @@ namespace FindMyRestaurant.Core.Repositories
 {
     public interface IRestaurantRepository : IRepository<Restaurant>
     {
+        Task<IList<Restaurant>> GetRestaurantsAlphabeticalAsync(int amount);
         Task<IList<Restaurant>> GetLatestRestaurantsAsync(int amount);
     }
 }

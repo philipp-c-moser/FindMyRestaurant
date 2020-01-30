@@ -135,8 +135,6 @@
                     <div class="col-sm-10">
                         <select class="custom-select" id="newVisit-Restaurant" name="newVisit-Restaurant">
                             <option selected="">Restaurant auswählen</option>
-                            <option value="1">Mediterrane Durlach</option>
-                            <option value="2">Brick + Bone Steakhouse - Karlsruhe</option>
                         </select>
                     </div>                   
                 </div>
@@ -153,3 +151,38 @@
 </div>
 
 <!-- ./Modals -->
+
+
+
+
+@section scripts {
+    
+    <script type="text/javascript">
+
+        const RestaurantSelectBoxOption = ({ Id, Name }) => `
+            <option value="${Id}">${Name}</option>
+        `;
+
+        $('#addVisitModal').on('show.bs.modal', function () {
+
+            $.ajax({
+                url: "/api/v1/restaurants/getAll"
+            }).then(function (data) {
+
+                data.forEach(appendToSelectBox);
+
+            });
+
+        });
+
+
+
+        function appendToSelectBox(item) {
+            $('#newVisit-Restaurant').append([item].map(RestaurantSelectBoxOption).join(''));
+        }
+
+
+
+    </script>    
+    
+}

@@ -2,6 +2,7 @@
 
 using FindMyRestaurant.Core.Domain;
 using FindMyRestaurant.Core.Dto.Restaurant;
+using FindMyRestaurant.Core.Dto.Visit;
 
 namespace FindMyRestaurant.Infrastructure.Mapping
 {
@@ -11,6 +12,9 @@ namespace FindMyRestaurant.Infrastructure.Mapping
         {
 
             CreateMap<Restaurant, RestaurantDto>();
+
+            CreateMap<Visit, SaveVisitDto>();
+            CreateMap<SaveVisitDto, Visit>();
 
         }
     }

@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
+
+using FindMyRestaurant.Framework.Controllers;
+using FindMyRestaurant.Core;
 
 namespace FindMyRestaurant.WebApi.v1
 {
-    public class VisitsController : ApiController
+    [RoutePrefix("api/v1/visits")]
+    public class VisitsController : ApiControllerBase
     {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public VisitsController(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
     }
 }

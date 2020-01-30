@@ -1,8 +1,10 @@
-﻿using System.Web.Http;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using System.Web.Http;
 
 using FindMyRestaurant.Framework.Controllers;
 using FindMyRestaurant.Core;
+using FindMyRestaurant.Core.Domain;
+using FindMyRestaurant.Core.Dto.Visit;
 
 namespace FindMyRestaurant.WebApi.v1
 {
@@ -19,8 +21,18 @@ namespace FindMyRestaurant.WebApi.v1
 
         [HttpPost]
         [Route("add")]
-        public async Task<IHttpActionResult> Add()
+        public IHttpActionResult Add([FromBody] SaveVisitDto saveVisitDto)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest("Not valid");
+            }
+
+            var visit = Mapper.Map<SaveVisitDto, Visit>(saveVisitDto);
+
+            _unitOfWork.VisitRepository.Add(visit);
+
+
             return Ok();
         }
 

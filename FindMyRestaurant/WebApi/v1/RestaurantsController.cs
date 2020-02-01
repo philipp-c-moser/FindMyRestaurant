@@ -38,5 +38,14 @@ namespace FindMyRestaurant.WebApi.v1
 
             return Mapper.Map<IEnumerable<Restaurant>, IEnumerable<RestaurantDto>>(allRestaurants);
         }
+
+
+        [Route("getOverviewItems")]
+        public async Task<IEnumerable<RestaurantOverviewDto>> GetOverviewItems()
+        {
+            var allRestaurants = await _unitOfWork.RestaurantRepository.GetRestaurantsAlphabeticalAsync(_secureMaxAmountOfItemsForRequests);
+
+            return Mapper.Map<IEnumerable<Restaurant>, IEnumerable<RestaurantOverviewDto>>(allRestaurants);
+        }
     }
 }

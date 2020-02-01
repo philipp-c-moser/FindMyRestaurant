@@ -16,6 +16,8 @@ namespace FindMyRestaurant.Infrastructure.Mapping
             CreateMap<Visit, SaveVisitDto>();
             CreateMap<SaveVisitDto, Visit>();
 
+            CreateMap<Restaurant, RestaurantOverviewDto>();
+
         }
     }
 }

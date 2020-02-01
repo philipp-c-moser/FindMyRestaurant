@@ -429,6 +429,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Core\Domain\Rating\" />
+    <Folder Include="Uploads\Restaurants\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

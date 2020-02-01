@@ -6,6 +6,7 @@ using FindMyRestaurant.Core;
 using FindMyRestaurant.Core.Domain;
 using FindMyRestaurant.Core.Dto.Visit;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace FindMyRestaurant.WebApi.v1
 {
@@ -17,6 +18,26 @@ namespace FindMyRestaurant.WebApi.v1
         public VisitsController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+        }
+
+        [Route("getAllForOverview")]
+        public async Task<IEnumerable<VisitOverviewDto>> GetAllForOverviewAsync()
+        {
+            var allVisits = await _unitOfWork.VisitRepository.GetAllAsync();
+            var visitOverviewDto = new List<VisitOverviewDto>();
+
+            foreach(var visit in allVisits)
+            {
+                visitOverviewDto.Add(new VisitOverviewDto
+                {
+                    Id = visit.Id,
+                    VisitName = visit.Name,
+                    // RestaurantName = _unitOfWork.RestaurantRepository.FindById(visit.Restaurant.Id).Name
+                });
+            }
+
+
+            return visitOverviewDto;
         }
 
 

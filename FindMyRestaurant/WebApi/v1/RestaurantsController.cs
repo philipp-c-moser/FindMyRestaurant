@@ -32,7 +32,7 @@ namespace FindMyRestaurant.WebApi.v1
 
 
         [Route("getAll")]
-        public async Task<IEnumerable<RestaurantDto>> GetAllAsync()
+        public async Task<IEnumerable<RestaurantDto>> GetAll()
         {
             var allRestaurants = await _unitOfWork.RestaurantRepository.GetRestaurantsAlphabeticalAsync(_secureMaxAmountOfItemsForRequests);
 

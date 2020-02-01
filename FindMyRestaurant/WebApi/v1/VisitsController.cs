@@ -36,7 +36,7 @@ namespace FindMyRestaurant.WebApi.v1
 
             _unitOfWork.VisitRepository.Add(visit);
 
-            _unitOfWork.SaveChangesAsync();
+            _unitOfWork.SaveChanges();
 
 
             return Ok();

@@ -49,6 +49,14 @@ span.pm-validation-error.hidden {
     display: none;
 }
 
+span.pm-form-success {
+    color: green;
+}
+
+span.pm-form-success.hidden {
+    display: none;
+}
+
 
 input.pm-validation-error {
     border: 1px solid red;

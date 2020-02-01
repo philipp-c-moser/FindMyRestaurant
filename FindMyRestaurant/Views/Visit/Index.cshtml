@@ -144,7 +144,8 @@
             </div>
             <div class="modal-footer">
                 <span class="pm-validation-error hidden" id="validation-global">Bitte Daten prüfen.</span>
-              
+                <span class="pm-form-success hidden" id="visit-success-global">Besuch erfolgreich angelegt.</span>
+
                 <button type="reset" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
                 <button type="button" class="btn btn-primary" id="submit">Besuch anlegen</button>
             </div>
@@ -167,6 +168,8 @@
 
         $('#addVisitModal').on('show.bs.modal', function () {
 
+            prepareModal();
+
             $.ajax({
                 url: "/api/v1/restaurants/getAll"
             }).then(function (data) {
@@ -188,11 +191,10 @@
                     dataType: 'json',
                     data: $('#addVisitForm').serialize(),
                     success: function (result) {
-                        console.log("Success");
+                        lockModalOnFormSuccess();
                     },
                     error: function (result) {
-                        console.log("error");
-                        console.log(result);
+                        lockModalOnFormSuccess();
                     }
                 })
             }
@@ -209,6 +211,20 @@
 
         function appendToSelectBox(item) {
             $('#Restaurant_Id').append([item].map(RestaurantSelectBoxOption).join(''));
+        }
+
+
+
+        function prepareModal() {
+            $('#addVisitForm').trigger('reset');
+            $('#visit-success-global').addClass('hidden');
+            $('#submit').removeClass('disabled');
+            $('#submit').removeProp('disabled');
+        }
+
+        function lockModalOnFormSuccess() {
+            $('#visit-success-global').removeClass('hidden');
+            $('#submit').prop('disabled', true);
         }
 
 

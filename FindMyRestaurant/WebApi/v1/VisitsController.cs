@@ -32,7 +32,7 @@ namespace FindMyRestaurant.WebApi.v1
                 {
                     Id = visit.Id,
                     VisitName = visit.Name,
-                    // RestaurantName = _unitOfWork.RestaurantRepository.FindById(visit.Restaurant.Id).Name
+                    RestaurantName = _unitOfWork.RestaurantRepository.FindById(visit.RestaurantId).Name
                 });
             }
 

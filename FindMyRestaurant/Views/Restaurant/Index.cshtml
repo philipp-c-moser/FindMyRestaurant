@@ -9,16 +9,57 @@
         @CustomHtmlHelper.PageTitleRow(ViewBag.Title)
 
 
-        <div class="row mt-5">
-
-            <div class="col-md-12">
-                <div class="d-flex justify-content-center">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </div>
-            </div>
+        <div class="row mt-2 mb-5" id="restaurantOverview">
 
         </div>
 
     </div>
 </div>
+
+
+@section scripts {
+
+    <script type="text/javascript">
+
+        const overviewItem = ({ Id, Name, Description, ImageName }) => `
+            <div class="col-md-6 col-xl-4 mt-2 mb-2">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-subtitle text-muted">${Name}</h5>
+                    </div>
+                    <img class="img-fluid" src="/Uploads/Restaurants/${ImageName}" alt="Restaurant Image ${Name}">
+                    <div class="card-body">
+                        <p class="card-text">
+                            ${Description}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        `;
+
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/api/v1/restaurants/getOverviewItems"
+            }).then(function (data) {
+                $('#restaurantOverview').html('');
+                data.forEach(appendToOverview);
+
+            });
+
+        });
+
+
+
+        function appendToOverview(item) {
+            $('#restaurantOverview').append([item].map(overviewItem).join(''));
+        }
+
+
+        
+
+    </script>    
+    
+}

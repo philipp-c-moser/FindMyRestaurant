@@ -165,7 +165,7 @@
     <Compile Include="Core\Domain\Visit.cs" />
     <Compile Include="Core\Dto\Restaurant\RestaurantDto.cs" />
     <Compile Include="Core\Dto\Visit\SaveVisitDto.cs" />
-    <Compile Include="Core\Dto\Visit\VisitDto.cs" />
+    <Compile Include="Core\Dto\Visit\VisitOverviewDto.cs" />
     <Compile Include="Core\Repositories\IRestaurantCategoryRepository.cs" />
     <Compile Include="Core\Repositories\IRestaurantRepository.cs" />
     <Compile Include="Core\Repositories\IVisitRepository.cs" />

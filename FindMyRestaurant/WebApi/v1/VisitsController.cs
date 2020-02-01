@@ -23,7 +23,7 @@ namespace FindMyRestaurant.WebApi.v1
         [Route("getAllForOverview")]
         public async Task<IEnumerable<VisitOverviewDto>> GetAllForOverviewAsync()
         {
-            var allVisits = await _unitOfWork.VisitRepository.GetAllAsync();
+            var allVisits = await _unitOfWork.VisitRepository.GetSortedDescByCreationAsync(_secureMaxAmountOfItemsForRequests);
             var visitOverviewDto = new List<VisitOverviewDto>();
 
             foreach(var visit in allVisits)

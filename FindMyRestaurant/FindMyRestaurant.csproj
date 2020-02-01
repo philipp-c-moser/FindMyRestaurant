@@ -393,6 +393,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Uploads\Restaurants\default.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -429,7 +430,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Core\Domain\Rating\" />
-    <Folder Include="Uploads\Restaurants\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

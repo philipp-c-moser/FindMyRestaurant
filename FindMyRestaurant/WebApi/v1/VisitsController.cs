@@ -42,5 +42,11 @@ namespace FindMyRestaurant.WebApi.v1
             return Ok();
         }
 
+
+        public async Task<IHttpActionResult> AmountOfVisits()
+        {
+            return Ok();
+        }
+
     }
 }

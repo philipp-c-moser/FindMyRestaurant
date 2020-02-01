@@ -41,6 +41,18 @@ namespace FindMyRestaurant.Infrastructure.Repositories
         }
 
 
+        public int Count()
+        {
+            return Set.Count();
+        }
+
+        public async Task<int> CountAsync()
+        {
+            return await Set.CountAsync();
+        }
+
+
+
 
         public TEntity FindById(object id)
         {

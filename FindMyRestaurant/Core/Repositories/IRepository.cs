@@ -10,6 +10,8 @@ namespace FindMyRestaurant.Core.Repositories
     {
         List<TEntity> GetAll();
         Task<List<TEntity>> GetAllAsync();
+        int Count();
+        Task<int> CountAsync();
 
 
         TEntity FindById(object id);

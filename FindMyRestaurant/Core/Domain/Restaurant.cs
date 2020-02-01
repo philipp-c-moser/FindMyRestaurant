@@ -9,6 +9,8 @@ namespace FindMyRestaurant.Core.Domain
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public string ImageName { get; set; }
 
         public IList<RestaurantCategory> RestaurantCategories { get; set; }
     }

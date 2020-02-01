@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using System;
 using System.Web.Http;
 
 using FindMyRestaurant.Framework.Controllers;
 using FindMyRestaurant.Core;
 using FindMyRestaurant.Core.Domain;
 using FindMyRestaurant.Core.Dto.Visit;
+using System.Threading.Tasks;
 
 namespace FindMyRestaurant.WebApi.v1
 {
@@ -22,7 +22,7 @@ namespace FindMyRestaurant.WebApi.v1
 
         [HttpPost]
         [Route("add")]
-        public IHttpActionResult Add([FromBody] SaveVisitDto saveVisitDto)
+        public async Task<IHttpActionResult> Add([FromBody] SaveVisitDto saveVisitDto)
         {
             if(!ModelState.IsValid)
             {
@@ -31,10 +31,12 @@ namespace FindMyRestaurant.WebApi.v1
 
             var visit = Mapper.Map<SaveVisitDto, Visit>(saveVisitDto);
 
+            visit.Restaurant = await _unitOfWork.RestaurantRepository.FindByIdAsync(saveVisitDto.Restaurant_Id);
+
 
             _unitOfWork.VisitRepository.Add(visit);
 
-            _unitOfWork.SaveChanges();
+            _unitOfWork.SaveChangesAsync();
 
 
             return Ok();

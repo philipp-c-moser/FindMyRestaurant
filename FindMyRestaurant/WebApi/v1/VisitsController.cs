@@ -43,9 +43,10 @@ namespace FindMyRestaurant.WebApi.v1
         }
 
 
-        public async Task<IHttpActionResult> AmountOfVisits()
+        [Route("getAmount")]
+        public async Task<int> GetAmount()
         {
-            return Ok();
+            return await _unitOfWork.VisitRepository.CountAsync();
         }
 
     }

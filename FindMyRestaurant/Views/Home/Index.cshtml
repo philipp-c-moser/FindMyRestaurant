@@ -14,8 +14,8 @@
             <div class="col-xl-6 col-md-6">
                 <div class="card-box widget-user">
                     <div class="text-center">
-                        <h2 class="font-weight-normal text-primary" data-plugin="counterup">
-                            <span class="rated-restaurants-amount"></span>
+                        <h2 class="font-weight-normal text-primary">
+                            <span id="rated-restaurants-amount"></span>
                         </h2>
                         <h5>Restaurants bewertet</h5>
                     </div>
@@ -24,8 +24,8 @@
             <div class="col-xl-6 col-md-6">
                 <div class="card-box widget-user">
                     <div class="text-center">
-                        <h2 class="font-weight-normal text-primary" data-plugin="counterup">
-                            <span class="visits-amount"></span>
+                        <h2 class="font-weight-normal text-primary">
+                            <span id="visits-amount"></span>
                         </h2>
                         <h5>Besuche gesamt</h5>
                     </div>
@@ -127,11 +127,22 @@
 
 
             $.ajax({
+                url: "/api/v1/visits/getAmount"
+            }).then(function (data) {
+                console.log(data);
+                $('#visits-amount').html(data);
+            });
+
+
+            $.ajax({
                 url: ""
             }).then(function (data) {
                 $('.rated-restaurants-amount').append(data.amountOfRatedRestaurants);
                 $('.visits-amount').append(data.amountOfVisits);
-            })
+            });
+
+
+            
 
         });
 

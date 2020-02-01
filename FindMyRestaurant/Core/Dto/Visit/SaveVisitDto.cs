@@ -10,6 +10,6 @@ namespace FindMyRestaurant.Core.Dto.Visit
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime DateOfVisit { get; set; }
-        public Domain.Restaurant Restaurant { get; set; }
+        public int Restaurant_Id { get; set; }
     }
 }

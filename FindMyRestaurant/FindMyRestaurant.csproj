@@ -190,8 +190,8 @@
       <DependentUpon>202001302312204_AddVisitsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Repositories\VisitRepository.cs" />
-    <Compile Include="Migrations\202002011940486_AddRestaurantIdPropertyToVisitsTable.cs" />
-    <Compile Include="Migrations\202002011940486_AddRestaurantIdPropertyToVisitsTable.Designer.cs">
+    <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202002011940486_AddRestaurantIdPropertyToVisitsTable.cs" />
+    <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202002011940486_AddRestaurantIdPropertyToVisitsTable.Designer.cs">
       <DependentUpon>202002011940486_AddRestaurantIdPropertyToVisitsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Routes\RouteConfig.cs" />
@@ -450,7 +450,7 @@
     <EmbeddedResource Include="Infrastructure\Data\Migrations\v1_0_0\202001302312204_AddVisitsTable.resx">
       <DependentUpon>202001302312204_AddVisitsTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002011940486_AddRestaurantIdPropertyToVisitsTable.resx">
+    <EmbeddedResource Include="Infrastructure\Data\Migrations\v1_0_0\202002011940486_AddRestaurantIdPropertyToVisitsTable.resx">
       <DependentUpon>202002011940486_AddRestaurantIdPropertyToVisitsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

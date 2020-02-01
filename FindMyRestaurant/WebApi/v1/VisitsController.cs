@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using System;
 using System.Web.Http;
 
 using FindMyRestaurant.Framework.Controllers;
@@ -30,7 +31,10 @@ namespace FindMyRestaurant.WebApi.v1
 
             var visit = Mapper.Map<SaveVisitDto, Visit>(saveVisitDto);
 
+
             _unitOfWork.VisitRepository.Add(visit);
+
+            _unitOfWork.SaveChanges();
 
 
             return Ok();

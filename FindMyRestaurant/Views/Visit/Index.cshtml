@@ -116,23 +116,23 @@
                
                 <form id="addVisitForm" action="" method="post">
                     <div class="form-group row">
-                        <label class="col-sm-2  col-form-label pm-required" for="newVisit-Name">Name</label>
+                        <label class="col-sm-2  col-form-label pm-required" for="Name">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" id="newVisit-Name" name="newVisit-Name" class="form-control" value="" required="">
+                            <input type="text" id="Name" name="Name" class="form-control" value="" required="">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-2  col-form-label pm-required" for="newVisit-Date">Datum</label>
+                        <label class="col-sm-2  col-form-label pm-required" for="DateOfVisit">Datum</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="newVisit-Date" type="date" name="newVisit-Date" required="">
+                            <input class="form-control" id="DateOfVisit" type="date" name="DateOfVisit" required="">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label pm-required" for="newVisit-Restaurant">Restaurant</label>
+                        <label class="col-sm-2 col-form-label pm-required" for="Restaurant">Restaurant</label>
                         <div class="col-sm-10">
-                            <select class="custom-select" id="newVisit-Restaurant" name="newVisit-Restaurant" required="">
+                            <select class="custom-select" id="Restaurant" name="Restaurant" required="">
                                 <option selected="" disabled="" hidden="">Restaurant auswählen</option>
                             </select>
                         </div>
@@ -181,20 +181,24 @@
 
         $('#submit').on('click', function () {
 
-            if ($('#newVisit-Name').val().length !== 0) {
+            if ($('#Name').val().length !== 0) {
                 $.ajax({
                     url: '/api/v1/visits/add',
                     type: 'POST',
                     dataType: 'json',
                     data: $('#addVisitForm').serialize(),
                     success: function (result) {
-                        alert("Super");
+                        console.log("Success");
+                    },
+                    error: function (result) {
+                        console.log("error");
+                        console.log(result);
                     }
                 })
             }
             else {
                 $('#validation-global').removeClass('hidden');
-                $('#newVisit-Name').addClass('pm-validation-error');
+                $('#Name').addClass('pm-validation-error');
             }
 
             
@@ -204,7 +208,7 @@
 
 
         function appendToSelectBox(item) {
-            $('#newVisit-Restaurant').append([item].map(RestaurantSelectBoxOption).join(''));
+            $('#Restaurant').append([item].map(RestaurantSelectBoxOption).join(''));
         }
 
 

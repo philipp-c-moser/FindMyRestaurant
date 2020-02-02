@@ -45,6 +45,12 @@ namespace FindMyRestaurant
             #endregion
 
 
+            #region Plugins            
+            bundles.Add(new StyleBundle("~/Content/Plugins/RangeSlider").Include("~/Plugins/ion-rangeslider/ion.rangeSlider.css"));
+            bundles.Add(new ScriptBundle("~/bundles/Plugins/RangeSlider").Include("~/Plugins/ion-rangeslider/ion.rangeSlider.min.js"));
+            #endregion
+
+
 
 
         }

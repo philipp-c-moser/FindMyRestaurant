@@ -207,6 +207,10 @@
     <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202002012039133_AddDescriptionAndImageToRestaurantsTable.Designer.cs">
       <DependentUpon>202002012039133_AddDescriptionAndImageToRestaurantsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202002021009427_AddRatingTables.cs" />
+    <Compile Include="Infrastructure\Data\Migrations\v1_0_0\202002021009427_AddRatingTables.Designer.cs">
+      <DependentUpon>202002021009427_AddRatingTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Routes\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Routes\WebApiConfig.cs" />
@@ -472,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\Data\Migrations\v1_0_0\202002012039133_AddDescriptionAndImageToRestaurantsTable.resx">
       <DependentUpon>202002012039133_AddDescriptionAndImageToRestaurantsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infrastructure\Data\Migrations\v1_0_0\202002021009427_AddRatingTables.resx">
+      <DependentUpon>202002021009427_AddRatingTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

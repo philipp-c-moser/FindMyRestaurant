@@ -432,11 +432,11 @@
     <Content Include="Views\Legal\Imprint.cshtml" />
     <Content Include="Views\Legal\PrivacyPolicy.cshtml" />
     <Content Include="Views\Restaurant\Index.cshtml" />
+    <Content Include="Views\Find\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Core\Domain\Rating\" />
-    <Folder Include="Views\Find\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

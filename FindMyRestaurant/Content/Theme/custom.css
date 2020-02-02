@@ -62,3 +62,50 @@ input.pm-validation-error {
     border: 1px solid red;
 }
 
+
+
+/* pm-click-button 
+.pm-click-button {
+    margin: 4px;
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    border: 1px solid #D0D0D0;
+    float: left;
+    width: 15%;
+}*/
+
+.pm-click-button {
+    margin: 3%;
+}
+
+
+
+.pm-click-button label span {
+    padding: 1rem 1rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.pm-click-button input + span {
+    border: 1px solid #c3e6cb;
+}
+
+
+.pm-click-button input:hover + span {
+    border: 1px solid #155724;
+}
+
+.pm-click-button input:checked + span {
+    border: 1px solid #155724;
+    background-color: #d4edda;
+}
+
+.pm-click-button input:checked:hover + span {
+    border: 1px solid #c3e6cb;
+}
+
+.pm-click-button input[type="checkbox" i] {
+    display: none;
+}
+
+/* ./pm-click-button */

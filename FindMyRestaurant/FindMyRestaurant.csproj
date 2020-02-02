@@ -161,7 +161,9 @@
     <Compile Include="Controllers\LegalController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Controllers\VisitController.cs" />
+    <Compile Include="Core\Domain\Rating\RatedRatingCriteria.cs" />
     <Compile Include="Core\Domain\Rating\Rating.cs" />
+    <Compile Include="Core\Domain\Rating\RatingCriteria.cs" />
     <Compile Include="Core\Domain\Restaurant.cs" />
     <Compile Include="Core\Domain\RestaurantCategory.cs" />
     <Compile Include="Core\Domain\Visit.cs" />

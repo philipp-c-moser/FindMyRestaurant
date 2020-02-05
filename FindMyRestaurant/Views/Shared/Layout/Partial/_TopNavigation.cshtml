@@ -24,10 +24,10 @@
                 </li>
 
                 <li class="d-none d-sm-block">
-                    <form class="app-search">
+                    <form class="app-search" action="@Url.Action("Index", "Find")" method="GET">
                         <div class="app-search-box">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Suche...">
+                                <input type="text" class="form-control" placeholder="Suche..." name="SearchString">
                                 <div class="input-group-append">
                                     <button class="btn" id="submit-app-search" type="submit">
                                         <i class="fe-search"></i>

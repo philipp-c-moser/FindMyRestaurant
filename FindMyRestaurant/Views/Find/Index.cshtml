@@ -136,9 +136,11 @@
 
 
         function transferUrlSearchString() {
-            $('#find-search-box').val(
-                decodeURI(getUrlParameter("SearchString", ""))
-            );
+            var decodedSearchValue = decodeURI(getUrlParameter("SearchString", ""));
+
+            $('#find-search-box').val(decodedSearchValue);
+            $('#app-search-input').val(decodedSearchValue);
+            $('#app-footer-search-input').val(decodedSearchValue);
         }
 
 

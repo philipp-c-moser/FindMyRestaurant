@@ -98,40 +98,30 @@
 
         $(document).ready(function () {    
 
-            transferUrlSearchString();
+            transferUrlSearchString(); 
 
-            $("#ratingCriteria_01").ionRangeSlider({
-                skin: "round",
-                grid: !0,
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                step: 10
-            });
-
-            $("#ratingCriteria_02").ionRangeSlider({
-                skin: "round",
-                grid: !0,
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                step: 10
-            });
-
-
-            $("#ratingCriteria_03").ionRangeSlider({
-                skin: "round",
-                grid: !0,
-                min: 0,
-                max: 100,
-                from: 0,
-                to: 100,
-                step: 10
-            });
+            initializeRatingSlider( ["ratingCriteria_01", "ratingCriteria_02", "ratingCriteria_03"] );
 
         });
+
+        function initializeRatingSlider(ratingCriterias) {
+
+            ratingCriterias.forEach(function (item) {
+
+                $("#" + item).ionRangeSlider({
+                    skin: "square",
+                    grid: true,
+                    min: 0,
+                    max: 10,
+                    from: 0,
+                    to: 10,
+                    step: 1,
+                    hide_min_max: true,
+                    values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                });
+
+            });
+        }
 
 
 

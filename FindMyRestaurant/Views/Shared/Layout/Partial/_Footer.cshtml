@@ -1,11 +1,28 @@
 ﻿<footer class="footer">
     <div class="container-fluid">
+
+        <div class="row d-block d-sm-none">
+            <form class="app-search" action="@Url.Action("Index", "Find")" method="GET">
+                <div class="app-search-box">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Suche..." name="SearchString">
+                        <div class="input-group-append">
+                            <button class="btn" id="submit-app-search" type="submit">
+                                <i class="fe-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
         <div class="row">
             <div class="col-md-6">
                 FindMyRestaurant v@(System.Configuration.ConfigurationManager.AppSettings["AppVersion"])
             </div>
             <div class="col-md-6">
-                <div class="text-md-right footer-links d-none d-sm-block">
+                <div class="text-md-right footer-links">
                     <a href="@Url.Action("Imprint", "Legal")">Impressum</a>
                     <a href="@Url.Action("PrivacyPolicy", "Legal")">Datenschutz</a>
                 </div>

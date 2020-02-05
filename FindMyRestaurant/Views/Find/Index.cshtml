@@ -14,76 +14,121 @@
 
         @CustomHtmlHelper.PageTitleRow(ViewBag.Title)
 
+
+        
+
         <div class="row">
             <div class="col-md-12">
-
-                <div class="card-box">    
-
-                    <form class="form-horizontal">
-
-                        <div class="form-group row">
-                            <input type="text" id="find-search-box" class="form-control form-control-lg" placeholder="Suche">                            
+            
+                <div class="card-box"> 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Sucheinstellungen</h4>
                         </div>
-
-                        <div class="form-group row mt-2 mb-5">
-                            <div class="pm-click-button col-md-2 col-sm-4">
-                                <label>
-                                    <input type="checkbox" /><span>Gourmet</span>
-                                </label>
-                            </div>
-                            <div class="pm-click-button col-md-2 col-sm-4">
-                                <label>
-                                    <input type="checkbox" value="1" /><span>Pizzeria</span>
-                                </label>
-                            </div>
-                            <div class="pm-click-button col-md-2 col-sm-4">
-                                <label>
-                                    <input type="checkbox" value="1" /><span>Steakhouse</span>
-                                </label>
-                            </div>
-                            <div class="pm-click-button col-md-2 col-sm-4">
-                                <label>
-                                    <input type="checkbox" /><span>Burger</span>
-                                </label>
-                            </div>
-                            <div class="pm-click-button col-md-2 col-sm-4">
-                                <label>
-                                    <input type="checkbox" value="1" /><span>Fast-Food</span>
-                                </label>
+                        <div class="col-md-6" style="text-align: right;">
+                            <div style="text-align:right;">
+                                <a class="btn btn-primary" data-toggle="collapse" href="#search-settings" role="button" aria-expanded="false" aria-controls="search-settings">
+                                    Sucheinstellungen öffnen
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="form-horizontal collapse mt-5" id="search-settings">
 
-                        <div class="form-group row">
-                            <label for="ratingCriteria_01" class="col-sm-2 control-label">Rating Criteria 1</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="ratingCriteria_01">
-                            </div>
+                                <div class="form-group row">
+                                    <input type="text" id="find-search-box" class="form-control form-control-lg" placeholder="Suche">
+                                </div>
+
+                                <div class="form-group row mt-2 mb-5">
+                                    <div class="pm-click-button col-md-2 col-sm-4">
+                                        <label>
+                                            <input type="checkbox" /><span>Gourmet</span>
+                                        </label>
+                                    </div>
+                                    <div class="pm-click-button col-md-2 col-sm-4">
+                                        <label>
+                                            <input type="checkbox" value="1" /><span>Pizzeria</span>
+                                        </label>
+                                    </div>
+                                    <div class="pm-click-button col-md-2 col-sm-4">
+                                        <label>
+                                            <input type="checkbox" value="1" /><span>Steakhouse</span>
+                                        </label>
+                                    </div>
+                                    <div class="pm-click-button col-md-2 col-sm-4">
+                                        <label>
+                                            <input type="checkbox" /><span>Burger</span>
+                                        </label>
+                                    </div>
+                                    <div class="pm-click-button col-md-2 col-sm-4">
+                                        <label>
+                                            <input type="checkbox" value="1" /><span>Fast-Food</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <!--
+        <div id="ratingCriteriaRangeSlider"></div>
+    -->
+
+
+                                <div class="form-group row">
+                                    <label for="ratingCriteria_01" class="col-sm-2 control-label">Rating Criteria 1</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="ratingCriteria_01">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="ratingCriteria_02" class="col-sm-2 control-label">Rating Criteria 2</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="ratingCriteria_02">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="ratingCriteria_03" class="col-sm-2 control-label">Rating Criteria 3</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="ratingCriteria_03">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-5 mb-0">
+                                    <button type="submit" class="btn btn-lg btn-block btn-primary waves-effect waves-light disabled" disabled="disabled">
+                                        Suchen & Finden <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+
+                            </form>
                         </div>
+                    </div>
+                    
+                    
 
-                        <div class="form-group row">
-                            <label for="ratingCriteria_02" class="col-sm-2 control-label">Rating Criteria 2</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="ratingCriteria_02">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="ratingCriteria_03" class="col-sm-2 control-label">Rating Criteria 3</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="ratingCriteria_03">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mt-5 mb-0">
-                            <button type="submit" class="btn btn-lg btn-block btn-primary waves-effect waves-light disabled" disabled="disabled">
-                                Suchen & Finden <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-
-                    </form>
+                    
                 </div>
             </div><!-- end col -->
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            
+                <div class="card-box"> 
+                    <div class="d-flex justify-content-center" id="visitsPreloader">
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
 
 
     </div>
@@ -96,20 +141,31 @@
 
     <script type="text/javascript">
 
+        const RatingCriteriaRangeSlider = ({ Id, Name }) => `
+            <div class="form-group row">
+                <label for="${Id}" class="col-sm-2 control-label">${Name}</label>
+                <div class="col-sm-10">
+                    <input type="text" id="${Id}">
+                </div>
+            </div>
+        `;
+
         $(document).ready(function () {    
 
             transferUrlSearchString(); 
 
-            initializeRatingSlider( ["ratingCriteria_01", "ratingCriteria_02", "ratingCriteria_03"] );
+            buildRatingSlider( ["ratingCriteria_01", "ratingCriteria_02", "ratingCriteria_03"] );
 
         });
 
-        function initializeRatingSlider(ratingCriterias) {
+        function buildRatingSlider(ratingCriterias) {
 
             ratingCriterias.forEach(function (item) {
 
+                // $('#ratingCriteriaRangeSlider').append([item].map(RatingCriteriaRangeSlider).join(''));
+
                 $("#" + item).ionRangeSlider({
-                    skin: "square",
+                    skin: "round",
                     grid: true,
                     min: 0,
                     max: 10,

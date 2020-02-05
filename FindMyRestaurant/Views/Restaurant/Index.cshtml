@@ -11,7 +11,7 @@
         <div class="row mb-4">
             <div class="col-sm-4">
                 <button type="button" class="btn btn-dark btn-default" data-toggle="modal" data-target="#addRestaurantModal">
-                    <i class="far fa-calendar-plus"></i> Restaurant anlegen
+                    <i class="far fa-plus-square"></i> Restaurant anlegen
                 </button>
             </div>
             <div class="col-sm-8">
@@ -46,9 +46,16 @@
         const overviewItem = ({ Id, Name, Description, ImageName }) => `
             <div class="col-md-6 col-xl-4 mt-2 mb-2">
 
-                <div class="card">
+                <div class="card">                    
                     <div class="card-body">
-                        <h5 class="card-subtitle text-muted">${Name}</h5>
+                        <div class="float-right">
+                            <a href="#" class="pm-edit-item-icon">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                        </div>
+                        <h5 class="card-subtitle text-muted">
+                            ${Name.substring(0, 30)}
+                        </h5>
                     </div>
                     <img class="img-fluid" src="/Uploads/Restaurants/${ImageName}" alt="Restaurant Image ${Name}">
                     <div class="card-body">
